@@ -1,0 +1,2 @@
+process_marker_rqt:yahboomcar_bringup:yahboomcar_ctrl:yahboomcar_description:yahboomcar_laser:yahboomcar_msgs:yahboomcar_nav
+-DCATKIN_DEVEL_PREFIX=/home/jetson/catkin_ws/devel -DCMAKE_INSTALL_PREFIX=/home/jetson/catkin_ws/install -G Unix Makefiles

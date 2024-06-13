@@ -1,0 +1,50 @@
+# The name of the plugin for the global planner to use with move_base, see pluginlib documentation for more details on plugins.
+#base_global_planner: "navfn/NavfnROS"
+#base_global_planner: "global_planner/GlobalPlanner"
+#base_global_planner: "carrot_planner/CarrotPlanner"
+
+# The name of the plugin for the local planner to use with move_base see pluginlib documentation for more details on plugins.
+#base_local_planner: "teb_local_planner/TebLocalPlannerROS"
+#base_local_planner: "dwa_local_planner/DWAPlannerROS"
+
+recovery_behaviors:
+  - name: "conservative_reset"
+    type: "clear_costmap_recovery/ClearCostmapRecovery"
+
+  - name: "clearing_rotation"
+    type: "rotate_recovery/RotateRecovery"
+    #- name: 'move_slow_and_clear'
+    #type: 'move_slow_and_clear/MoveSlowAndClear'
+
+controller_frequency: 10.0
+planner_patience: 5.0
+controller_patience: 5.0
+conservative_reset_dist: 5.0
+recovery_behavior_enabled: true
+clearing_rotation_allowed: true
+shutdown_costmaps: false
+oscillation_timeout: 10.0
+oscillation_distance: 0.3
+planner_frequency: 10.0 #0.0
+max_planning_retries: -1.0
+
+conservative_reset:
+  reset_distance: 1.0
+  #layer_names: [static_layer, obstacle_layer, inflation_layer]
+  layer_names: [obstacle_layer]
+
+aggressive_reset:
+  reset_distance: 3.0
+  #layer_names: [static_layer, obstacle_layer, inflation_layer]
+  layer_names: [obstacle_layer]
+
+super_reset:
+  reset_distance: 5.0
+  #layer_names: [static_layer, obstacle_layer, inflation_layer]
+  layer_names: [obstacle_layer]
+
+move_slow_and_clear:
+  clearing_distance: 0.1
+  limited_trans_speed: 0.1
+  limited_rot_speed: 0.4
+  limited_distance: 0.3

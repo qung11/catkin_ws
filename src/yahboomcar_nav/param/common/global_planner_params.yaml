@@ -1,0 +1,15 @@
+GlobalPlanner:
+  allow_unknown: true # Allow planner to plan through unknown space, default true
+  default_tolerance: 0.0 # If goal in obstacle, plan to the closest point in radius default_tolerance, default 0.0
+  visualize_potential: false
+  use_dijkstra: true #If true, use dijkstra's algorithm. Otherwise, A*.
+  use_quadratic: true # Use the quadratic approximation of the potential. Otherwise, use a simpler calculation, default true
+  use_grid_path: false # Create a path that follows the grid boundaries. Otherwise, use a gradient descent method, default false
+  old_navfn_behavior: false # Exactly mirror behavior of navfn, use defaults for other boolean parameters, default false
+
+  lethal_cost: 253
+  neutral_cost: 50
+  cost_factor: 3
+  publish_potential: True
+  orientation_mode: 0
+  orientation_window_size: 1

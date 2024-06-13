@@ -1,0 +1,4 @@
+<launch>
+    <include file="$(find yahboomcar_bringup)/launch/bringup.launch"/>
+    <include file="$(find yahboomcar_nav)/launch/yahboomcar_map.launch"/>
+</launch>

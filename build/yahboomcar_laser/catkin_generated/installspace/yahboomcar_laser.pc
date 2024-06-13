@@ -1,0 +1,8 @@
+prefix=/home/jetson/catkin_ws/install
+
+Name: yahboomcar_laser
+Description: Description of yahboomcar_laser
+Version: 0.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 
